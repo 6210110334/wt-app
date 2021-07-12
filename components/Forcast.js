@@ -8,7 +8,7 @@ export default function Forecast(props) {
             <Text style={styles.description}>{props.description}</Text>
             <View style={styles.row}>
                 <Text style={styles.show}>{props.temp}</Text>
-                <Text style={styles.fontSize12}>°C</Text>
+                <Text style={styles.fontSize12}> °C</Text>
             </View>
         </View>
     );
@@ -34,6 +34,7 @@ const styles = StyleSheet.create({
         color: '#ffffff'
     },
     row: {
-        flexDirection: 'row'
+        flexDirection: 'row',
+        alignItems:'flex-end'
     }
 });
