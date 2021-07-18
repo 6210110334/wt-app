@@ -13,8 +13,8 @@ const availableZipItems = [
 const ZipItem = ({ place, code, navigation }) => (
     <TouchableHighlight style={styles.margin    } onPress={() => navigation.navigate('Weather', { zipCode: code })}>
         <View style={styles.zipItem}>
-            <Text style={styles.font}>{place}</Text>
-            <Text style={styles.font}>{code}</Text>
+            <Text style={styles.fontDescription}>{place}</Text>
+            <Text style={styles.fontDescription}>{code}</Text>
         </View>
     </TouchableHighlight>
 )
@@ -26,6 +26,10 @@ export default function ZipCodeScreen() {
     return (
         <View >
             <ImageBackground source={require('../image/zipCode.jpg')} style={styles.image}>
+            <View style={styles.title}>
+            <Text style={styles.fontTitle}>Province</Text>
+            <Text style={styles.fontTitle}>Zipcode</Text>
+        </View>
                 <FlatList
                     data={availableZipItems}
                     keyExtractor={_keyExtractor}
@@ -41,9 +45,16 @@ const styles = StyleSheet.create({
     zipItem: {
         flexDirection: 'row',
         justifyContent: 'space-between',
-        height: '100%',
+       height:'100%',
         backgroundColor: '#f0ffff',
         margin:'0.3rem',
+    },
+    title:{
+        flexDirection: 'row',
+        height:'10%',
+        justifyContent: 'space-between',
+        backgroundColor: '#b0e0e6',
+        margin:'0.5rem',
     },
     margin:{
         margin:'0.2rem',
@@ -51,12 +62,16 @@ const styles = StyleSheet.create({
    },
     image: {
         width: '100%',
-        height: '152%'
+        height: '138%'
     },
-    font: {    
+    fontDescription: {    
         fontSize: 20,
         color: '#000080',
         margin:'0.3rem',
-
+    },
+    fontTitle:{
+        fontSize: 22,
+        color: '#191970',
+        margin:'0.3rem',
     }
 })
