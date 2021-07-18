@@ -46,11 +46,11 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'space-evenly',
         width: '100%',
-        height: '259%',
+        height: '214%',
     },
     title: {
         alignItems: 'center',
-        fontSize: 14,
+        fontSize: 20,
         color: '#ffffff'
     }
 });

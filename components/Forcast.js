@@ -21,20 +21,20 @@ const styles = StyleSheet.create({
     },
     show: {
         alignItems: 'center',
-        fontSize: 20,
+        fontSize: 30,
         color: '#ffffff'
     },
     description: {
         alignItems: 'center',
-        fontSize: 14,
+        fontSize: 20,
         color: '#ffffff'
     },
     fontSize12: {
-        fontSize: 12,
+        fontSize: 20,
         color: '#ffffff'
     },
     row: {
         flexDirection: 'row',
-        alignItems:'flex-end'
+        alignItems: 'flex-end'
     }
 });
